@@ -10,7 +10,7 @@ export function HomePage() {
 
   //ensures that request to the backend is only sent once when needed done by the empty array
   useEffect(() => {
-    axios("http://localhost:3000/api/products").then((response) => {
+    axios("/api/products").then((response) => {
       setProducts(response.data);
     });
 
