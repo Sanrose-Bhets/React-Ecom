@@ -5,6 +5,7 @@ import "./HomePage.css";
 
 export function HomePage() {
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
 
 
   //ensures that request to the backend is only sent once when needed done by the empty array
@@ -12,13 +13,18 @@ export function HomePage() {
     axios("http://localhost:3000/api/products").then((response) => {
       setProducts(response.data);
     });
+
+    axios("http://localhost:3000/api/cart-items").then((response)=>{
+      setCart(response.data);
+    })
+
   },[]);
 
   return (
     <>
       <title>Ecommerce Store</title>
 
-      <Header />
+      <Header cart={cart}/>
       <div className="home-page">
         <div className="products-grid">
           {products.map((product) => {
