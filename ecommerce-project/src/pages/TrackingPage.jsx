@@ -1,7 +1,9 @@
 import './TrackingPage.css';
+//TRACKING IS REMAING
 export function TrackingPage() {
   return (
     <>
+    
       <title>Tracking</title>
       <div className="header">
         <div className="left-section">
