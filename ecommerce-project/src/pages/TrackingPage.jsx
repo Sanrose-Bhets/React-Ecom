@@ -1,5 +1,5 @@
 import './TrackingPage.css';
-//TRACKING IS REMAING
+//Tracking has no backend API
 export function TrackingPage() {
   return (
     <>
