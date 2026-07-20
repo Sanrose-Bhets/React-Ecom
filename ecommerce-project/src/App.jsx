@@ -4,7 +4,7 @@ import axios from 'axios'
 import { CheckoutPage } from "./pages/checkout/CheckoutPage";
 import { HomePage } from "./pages/home/HomePage";
 import { TrackingPage } from "./pages/TrackingPage";
-import { OrdersPage } from "./pages/OrdersPage";
+import { OrdersPage } from "./pages/orders/OrdersPage";
 import "./App.css";
 
 function App() {
