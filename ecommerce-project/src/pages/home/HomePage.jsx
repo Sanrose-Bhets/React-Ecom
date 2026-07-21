@@ -9,10 +9,13 @@ export function HomePage({cart}) {
 
   //ensures that request to the backend is only sent once when needed done by the empty array
   useEffect(() => {
-    axios.get("/api/products").then((response) => {
+    const getHomeData= async ()=>{
+      const response = await axios.get("/api/products")
       setProducts(response.data);
-    });
-
+    }
+    
+    
+    getHomeData();
   },[]);
 
   return (
